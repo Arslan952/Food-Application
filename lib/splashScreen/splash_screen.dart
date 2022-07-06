@@ -18,6 +18,7 @@ class _splashScreenState extends State<splashScreen> {
       Navigator.push(context, MaterialPageRoute(builder: (context)=>const AuthScreen()));
     });
   }
+  @override
   void initState()
   {
     super.initState();
