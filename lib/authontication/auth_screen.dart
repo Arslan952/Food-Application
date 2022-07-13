@@ -29,7 +29,7 @@ class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin {
             elevation: 5,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.black26,
                 borderRadius: BorderRadius.circular(12)
               ),
               child: TabBar(
@@ -51,11 +51,15 @@ class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin {
               ),
             ),
           ),
-          const TabBarView(children:[
-            LoginScreen(),
-            RegisterScreen()
+           Expanded(
+             child: TabBarView(
+               controller: tabController,
+                children:const [
+              LoginScreen(),
+              RegisterScreen()
           ]
-          )
+          ),
+           )
         ],
       ),
     );
